@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+  <link href="css/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
+  <link href="css/ui-demo.css" rel="stylesheet" type="text/css"/>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  
+
+<style  type="text/css">
+    .fg-button { outline: 0; margin:0 4px 0 0; padding: .4em 1em; text-decoration:none !important; cursor:pointer; position: relative; text-align: center; zoom: 1; }
+	
+	.fg-buttonset { float:left; }
+	.fg-buttonset .fg-button { float: left; }
+	.fg-buttonset-single .fg-button, 
+	.fg-buttonset-multi .fg-button { margin-right: -1px;}
+	
+	.fg-toolbar { padding: .5em; margin: 0;  }
+	.fg-toolbar .fg-buttonset { margin-right:1.5em; padding-left: 1px; }
+	.fg-toolbar .fg-button { font-size: 1em;  }
+	.fg-datetime {font-size: 1em; float: left; margin-right: 5px; margin-left: 5px; }
+</style>
+
+
+
+<script type="text/javascript">
+    $(function(){   
+    
+    $( "#sortable" ).sortable();
+		$( "#sortable" ).disableSelection();
+		
+$("#datepicker").datepicker();
+		//all hover and click logic for buttons
+		$(".fg-button:not(.ui-state-disabled)")
+		.hover(
+			function(){ 
+				$(this).addClass("ui-state-hover"); 
+			},
+			function(){ 
+				$(this).removeClass("ui-state-hover"); 
+			}
+		)
+		.mousedown(function(){
+				$(this).parents('.fg-buttonset-single:first').find(".fg-button.ui-state-active").removeClass("ui-state-active");
+				if( $(this).is('.ui-state-active.fg-button-toggleable, .fg-buttonset-multi .ui-state-active') ){ $(this).removeClass("ui-state-active"); }
+				else { $(this).addClass("ui-state-active"); }	
+		})
+	});
+
+</script>
+
+
+</head>
+<body>
+<div class="fg-buttonset fg-buttonset-single fg-toolbar ui-widget-header ui-corner-all ui-helper-clearfix">
+	<button class="fg-button ui-state-default ui-priority-primary ui-corner-left">1hour</button>
+	<button class="fg-button ui-state-default ui-priority-primary">6hours</button>
+	<button class="fg-button ui-state-default ui-priority-primary">12hours</button>
+	<button class="fg-button ui-state-default ui-state-active ui-priority-primary">1day</button>
+	<button class="fg-button ui-state-default ui-priority-primary">2days</button>
+	<button class="fg-button ui-state-default ui-priority-primary ui-corner-right">1week</button>
+
+</div>
+
+
+
+<ul id="sortable">
+	<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+	<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+	<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+	<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+	<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+	<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+	<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+
+
+
+<p>Date: <input type="text" id="datepicker"></p> 
+
+
+
+</body>
+</html>

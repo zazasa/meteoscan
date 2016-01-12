@@ -1,0 +1,7 @@
+Minimizza a systray
+Aggiornamento dati dai vari linedit
+Limite righe editbox
+Verifica errore clarityII
+Azzerare la variabile data ad ogni aggiornamento.
+usare datetime al posto di date,time
+retry dopo fallimento causa db down.

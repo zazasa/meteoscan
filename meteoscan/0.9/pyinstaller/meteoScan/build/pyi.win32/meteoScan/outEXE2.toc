@@ -1,0 +1,10 @@
+('Z:\\meteoscan\\0.9\\pyinstaller\\meteoScan\\dist\\meteoScan.exe',
+ False,
+ False,
+ None,
+ None,
+ [],
+ None,
+ True,
+ 0,
+ 1323807049L)

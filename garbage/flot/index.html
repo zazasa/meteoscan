@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+        <title>cloud sensor test</title> 
+      	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script> 
+	<script type="text/javascript" src="js/jquery-ui-1.8.9.min.js"></script> 
+	<script type="text/javascript" src="js/jquery.flot.min.js"></script> 
+	<script type="text/javascript" src="js/cloudsensorparse.js"></script> 
+	<script type="text/javascript" src="cs_parse_config.js"></script> 
+
+
+	
+
+
+
+ </head> 
+    <body> 
+	<div id="plot1" style="width:600px; height: 600px;"></div>
+	<div id="plot2" style="width:600px; height: 600px; float:left;"></div>
+	<select id="sensor">  
+		<option value="sensor">Sensor</option>
+	</select>
+	
+
+	<script type="text/javascript">
+
+/*
+		$.plot($("#plot1"), [ cs_get_dataplot("DEW") , cs_get_dataplot("WIND") ]);
+		$.plot($("#plot2"), [ cs_get_dataplot("HUM") ]);
+
+
+		$.each(
+			DATASET_LIST,
+			function(i,value) {
+				$("#sensor").append("<option value=" + value + ">" + value + "</option>");			
+			}
+		);
+
+		$("#sensor").change(
+			function() {
+				fieldname = $("#sensor").val();
+				$.plot($("#plot2"), [ cs_get_dataplot(fieldname) ]);			
+		});
+		
+*/
+
+    meteo_test();	
+
+	</script>
+
+    </body> 
+</html> 

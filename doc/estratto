@@ -1,0 +1,97 @@
+'Clarity II version string as it appears in the Clarity II window.
+Public Property Get ClarityIIVersion() As String
+
+'Firmware version number last read from the sensor head. This is in
+'a "T" message that is sent every ~100 seconds. If this function is zero,
+'no "T" message has been received yet.
+Public Property Get FirmwareVersion() As Integer
+
+Public Property Get CloudCondition() As CloudCond
+
+Public Property Get WindCondition() As WindCond
+
+Public Property Get RainCondition() As RainCond
+
+Public Property Get DayCondition() As DayCond
+
+'Relative sky temperature in deg. C.
+'This is 999. when saturated hot, -999. saturated cold. -998. when
+'the sensor is wet and the sky temperature therefore is unknown.
+Public Property Get RelSkyT() As Double
+
+'Ambient temperature in deg. C.
+Public Property Get AmbientT() As Double
+
+'Thermopile case temperature in deg. C.
+'This is 999. when saturated hot, -999. saturated cold.
+Public Property Get SensorT() As Double
+
+'Wind speed in km/hr.
+V0026
+49
+Cloud Sensor II User’s Manual
+'-1. if still heating up,
+'-2. if wet,
+'-3. if the A/D from the wind probe is bad (firmware <V56 only),
+'-4. if the probe is not heating (a failure condition),
+'-5. if the A/D from the wind probe is low (shorted) (firmware >=V56 only),
+'-6. if the A/D from the wind probe is high (no probe) (firmware >=V56 only).
+Public Property Get Wind() As Double
+
+'Relative humidity in percent.
+Public Property Get HumidityPercent() As Double
+
+'Dew point in deg. C.
+Public Property Get DewPointT() As Double
+
+'Daylight level in arbitrary units.
+Public Property Get DayLightV() As Integer
+
+'Did a rain drop fall in the last 2.1 second cycle?
+Public Property Get RainF() As Boolean
+
+'Was the sensor head wet in the last 2.1 second cycle?
+Public Property Get WetF() As Boolean
+Public Property Get HeaterPercent() As Double
+
+'Clear/cloudy threshold from the setup window in deg. C.
+Public Property Get CloudyThreshT() As Double
+
+'Cloudy/very cloudy threshold from the setup window in deg. C.
+Public Property Get VCloudyThreshT() As Double
+
+'Calm/windy threshold from the setup window in km/hr.
+Public Property Get WindyThreshSpeed() As Double
+
+'Windy/very windy threshold from the setup window in km/hr.
+Public Property Get VWindyThreshSpeed() As Double
+
+'Dark/light threshold from the setup window.
+Public Property Get DayThreshV() As Double
+
+'Light/very light threshold from the setup window.
+Public Property Get VDayThreshV() As Double
+
+'No rain/rain drops threshold from the setup window in arbitrary units.
+Public Property Get RainThreshV() As Integer
+
+'Not wet/wet threshold from the setup window in arbitrary units.
+Public Property Get WetThreshV() As Integer
+
+'Are the displayed temperatures in Fahrenheit or Celsius?
+'Note: all ActiveX and logged temperatures are always in Celsius.
+Public Property Get Fahrenheit() As Boolean
+
+'Are the displayed wind speeds in km/hr, mph, or m/s?
+'=0 for km/hr, =1 for mph, =2 for m/s.
+'ActiveX and logged speeds are always in km/hr.
+Public Property Get WindUnits() As Integer
+
+V0026
+50
+Cloud Sensor II User’s Manual
+'See if data is arriving properly from the sensor head. There is data about
+'every 2.1 seconds so allow, say, 10 seconds in order to not report a failure
+'due to bad messages from lightning, etc.
+Public Property Get SecondsSinceGoodData() As Long
+

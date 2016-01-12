@@ -1,0 +1,45 @@
+CREATE USER 'meteoscan'@'%' IDENTIFIED BY  '*********';
+
+GRANT USAGE ON * . * TO  'meteoscan'@'%' IDENTIFIED BY  '*********' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+
+CREATE DATABASE IF NOT EXISTS  `meteo` ;
+
+GRANT ALL PRIVILEGES ON  `meteo` . * TO  'meteoscan'@'%';
+
+
+CREATE TABLE  `meteo`.`meteo_data` (
+`ID` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY 
+) ENGINE = MYISAM
+
+ALTER TABLE  `meteo_data` ADD  `date` DATE NOT NULL,
+ADD  `time` TIME NOT NULL,
+ADD  `AmbientT` FLOAT NOT NULL ,
+ADD  `ClarityIIVersion` VARCHAR( 10 ) NOT NULL ,
+ADD  `CloudCondition` FLOAT NOT NULL ,
+ADD  `CloudyThreshT` FLOAT NOT NULL ,
+ADD  `DayCondition` BOOL NOT NULL ,
+ADD  `DayLightV` INT NOT NULL ,
+ADD  `DayThreshV` INT NOT NULL ,
+ADD  `DewPointT` INT NOT NULL ,
+ADD  `Fahrenheit` FLOAT NOT NULL ,
+ADD  `FirmwareVersion` FLOAT NOT NULL ,
+ADD  `HeaterPercent` INT NOT NULL ,
+ADD  `HumidityPercent` INT NOT NULL ,
+ADD  `Mph` FLOAT NOT NULL ,
+ADD  `RainCondition` BOOL NOT NULL ,
+ADD  `RainF` FLOAT NOT NULL ,
+ADD  `RainThreshV` INT NOT NULL ,
+ADD  `RelSkyT` BOOL NOT NULL ,
+ADD  `RoofCloseRequested` INT NOT NULL ,
+ADD  `SecondsSinceGoodData` BOOL NOT NULL ,
+ADD  `SensorT` FLOAT NOT NULL ,
+ADD  `VCloudyThreshT` INT NOT NULL ,
+ADD  `VDayThreshV` INT NOT NULL ,
+ADD  `VWindyThreshSpeed` FLOAT NOT NULL ,
+ADD  `WetF` FLOAT NOT NULL ,
+ADD  `WetThreshV` FLOAT NOT NULL ,
+ADD  `Wind` FLOAT NOT NULL ,
+ADD  `WindCondition` INT NOT NULL ,
+ADD  `WindUnits` FLOAT NOT NULL ,
+ADD  `WindyThreshSpeed` BOOL NOT NULL ;
+

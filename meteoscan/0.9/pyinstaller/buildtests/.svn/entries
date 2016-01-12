@@ -1,0 +1,77 @@
+10
+
+dir
+1899
+http://svn.pyinstaller.org/trunk/buildtests
+http://svn.pyinstaller.org
+
+
+
+2011-12-09T18:39:41.943355Z
+1896
+htgoebel
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+8dd32b29-ccff-0310-8a9a-9233e24343b1
+
+basic
+dir
+
+multipackage
+dir
+
+import
+dir
+
+libraries
+dir
+
+interactive
+dir
+
+runtests.py
+file
+
+
+
+
+2011-12-13T19:57:55.159319Z
+bb7bb91e69079d8d12279a4b4595e676
+2011-12-09T18:25:49.905094Z
+1895
+htgoebel
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12024
+

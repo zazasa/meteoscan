@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/!svn/ver/1861/trunk/buildtests/libraries
+END
+test_pycrypto.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/1438/trunk/buildtests/libraries/test_pycrypto.py
+END
+test_pycrypto.spec
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/1438/trunk/buildtests/libraries/test_pycrypto.spec
+END
+test_wx.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/1438/trunk/buildtests/libraries/test_wx.py
+END
+test_xml.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/1860/trunk/buildtests/libraries/test_xml.py
+END
+test_wx.spec
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/1438/trunk/buildtests/libraries/test_wx.spec
+END
+test_sqlalchemy.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/1583/trunk/buildtests/libraries/test_sqlalchemy.py
+END
+test_PIL2.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/1789/trunk/buildtests/libraries/test_PIL2.py
+END
+test_numpy.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/1438/trunk/buildtests/libraries/test_numpy.py
+END
+test_PIL2.spec
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/1789/trunk/buildtests/libraries/test_PIL2.spec
+END
+test_numpy.spec
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/1438/trunk/buildtests/libraries/test_numpy.spec
+END
+test_enchant.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/1505/trunk/buildtests/libraries/test_enchant.py
+END
+test_Image.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/1764/trunk/buildtests/libraries/test_Image.py
+END
+test_PIL.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/1763/trunk/buildtests/libraries/test_PIL.py
+END
+test_Image.spec
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/1764/trunk/buildtests/libraries/test_Image.spec
+END
+tinysample.tiff
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/1762/trunk/buildtests/libraries/tinysample.tiff
+END
+test_PIL.spec
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/1762/trunk/buildtests/libraries/test_PIL.spec
+END

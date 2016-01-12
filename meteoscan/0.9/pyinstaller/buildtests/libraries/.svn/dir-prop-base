@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 40
+tinysample.png
+test_xml.spec
+build
+dist
+
+END

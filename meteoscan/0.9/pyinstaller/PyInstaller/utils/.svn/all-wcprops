@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/!svn/ver/1869/trunk/PyInstaller/utils
+END
+icon.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/1791/trunk/PyInstaller/utils/icon.py
+END
+misc.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/1724/trunk/PyInstaller/utils/misc.py
+END
+hg.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/1844/trunk/PyInstaller/utils/hg.py
+END
+winutils.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/1869/trunk/PyInstaller/utils/winutils.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/1714/trunk/PyInstaller/utils/__init__.py
+END
+versioninfo.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/1800/trunk/PyInstaller/utils/versioninfo.py
+END
+git.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/1845/trunk/PyInstaller/utils/git.py
+END
+winmanifest.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/1865/trunk/PyInstaller/utils/winmanifest.py
+END
+winresource.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/1712/trunk/PyInstaller/utils/winresource.py
+END
+svn.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/1844/trunk/PyInstaller/utils/svn.py
+END

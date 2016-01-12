@@ -1,0 +1,10 @@
+('E:\\meteoscan\\dist\\meteoScan.exe',
+ False,
+ False,
+ None,
+ None,
+ [],
+ False,
+ True,
+ 0,
+ 1316000201L)

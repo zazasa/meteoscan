@@ -1,0 +1,13 @@
+create table meteo_datatest select * from meteo_data;
+alter table meteo_datatest add datetime DATETIME after ID;
+update meteo_datatest set datetime = addtime(date,time);
+
+alter table meteo_data drop date;
+alter table meteo_data drop time;
+
+
+
+
+#find duplicate
+select max(id),date,time from meteo_datatest group by date_format(addtime(date,time),"%Y-%m-%d %H:%i")  having count(*) > 1 order by id desc; 
+

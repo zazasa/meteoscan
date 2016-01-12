@@ -1,0 +1,137 @@
+
+<!-- 1. Add these JavaScript inclusions in the head of your page --> 
+<link href="css/themes/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
+<link href="css/ui-demo.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/highcharts.js"></script> 
+<script type="text/javascript" src="meteo/meteo.js"></script>
+<script type="text/javascript" src="meteo/meteoconfig.js"></script>  
+
+<style>
+	.column { float: left; padding-bottom: 100px; }
+	.portlet { margin: 0 0.3em 0.3em 0; width: 515px}
+	.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+	.portlet-header .ui-icon { float: right; }
+	.portlet-content { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em;  }
+	.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important;}
+	.ui-sortable-placeholder * { visibility: hidden; }
+</style>
+
+<!-- 2. Add the JavaScript to initialize the chart on document ready --> 
+<script type="text/javascript"> 
+    $(document).ready(function() {
+
+        
+        
+		meteo_dataplot("daylight","dayPlot","1 day");
+        meteo_dataplot("humidity","humPlot","1 day")
+        meteo_dataplot("wind","wPlot","1 day")
+        meteo_dataplot("temperature","tPlot","1 day")
+        meteo_dataplot("relsky","rsPlot","1 day")
+        
+        
+        $(".column").sortable({
+            cancel: ".undraggable"
+        });
+        
+        $(".portlet-content").addClass("undraggable");
+        
+        $( ".portlet" ).addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+    		.find( ".portlet-header" )
+				.addClass( "ui-widget-header ui-corner-all" )
+				.prepend( "<span class='ui-icon ui-icon-minusthick undraggable'></span>")
+				.end()
+			.find( ".portlet-content" );
+			
+		$( ".portlet-header .ui-icon" ).click(function() {
+    		$( this ).toggleClass( "ui-icon-minusthick" ).toggleClass( "ui-icon-plusthick" );
+	    	$( this ).parents( ".portlet:first" ).find( ".portlet-content" ).toggle("blind");
+		});
+		
+		$( ".column" ).disableSelection();
+		
+		$(".datepicker").datepicker();
+		
+		$(".fg-button:not(.ui-state-disabled)")
+		.hover(
+			function(){ 
+				$(this).addClass("ui-state-hover"); 
+			},
+			function(){ 
+				$(this).removeClass("ui-state-hover"); 
+			}
+		)
+		.click(function(){
+			if( !($(this).is('.ui-state-active')) ){ 
+    	    	$(this).parents('.fg-buttonset-single:first').find(".fg-button.ui-state-active").removeClass("ui-state-active");
+			    $(this).addClass("ui-state-active");
+			    
+   		    		    		    		    		    		    		    		    		    		    		    		  		 
+			    meteo_updatePlot("relsky",$(this).attr("value"))
+			    meteo_updatePlot("temperature",$(this).attr("value"))
+			    meteo_updatePlot("wind",$(this).attr("value"))
+			    meteo_updatePlot("humidity",$(this).attr("value"))
+			    meteo_updatePlot("daylight",$(this).attr("value"))
+
+/*
+		    	var series = charts["rsPlot"].series[0];
+                if (series.visible) {
+                    series.hide();
+                 
+                } else {
+                    series.show();
+                 
+                }	
+*/                
+			            }
+		})
+        
+    });
+		
+</script> 
+
+
+
+
+
+
+
+
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Controls</div>
+        <div class="portlet-content fg-buttonset fg-buttonset-single fg-toolbar ui-widget-header ui-corner-all ui-helper-clearfix">
+        Last: 
+	        <button class="fg-button ui-state-default ui-priority-primary ui-corner-left"   value="1 hour">1hour</button>
+	        <button class="fg-button ui-state-default ui-priority-primary"                  value="6 hour" >6hours</button>
+	        <button class="fg-button ui-state-default ui-priority-primary"                  value="12 hour">12hours</button>
+	        <button class="fg-button ui-state-default ui-priority-primary ui-state-active"  value="1 day" >1day</button>
+	        <button class="fg-button ui-state-default ui-priority-primary"                  value="2 day" >2days</button>
+	        <button class="fg-button ui-state-default ui-priority-primary ui-corner-right"  value="1 week" >1week</button>
+        </div>
+    </div>
+
+
+    <div class="portlet">
+        <div class="portlet-header">Sky - Ambient (&ordmC)</div>
+	    <div class="plot portlet-content" id="rsPlot" style="width: 500px; height: 100px;"></div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Temperature (&ordmC)</div>
+	    <div class="plot portlet-content" id="tPlot" style="width: 500px; height: 200px;"></div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Wind (km/hr)</div>
+	    <div class="plot portlet-content" id="wPlot" style="width: 500px; height: 150px;"></div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Humidity (%)</div>
+	    <div class="plot portlet-content" id="humPlot" style="width: 500px; height: 150px;"></div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Day Light</div>
+	    <div class="plot portlet-content" id="dayPlot" style="width: 500px; height: 150px;"></div> 
+    </div>
+</div>

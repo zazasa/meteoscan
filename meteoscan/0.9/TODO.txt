@@ -1,0 +1,8 @@
+Minimizza a systray
+Aggiornamento dati dai vari linedit
+Limite righe editbox
+Verifica errore clarityII
+Azzerare la variabile data ad ogni aggiornamento. done!
+usare datetime al posto di date,time    done!
+retry dopo fallimento causa db down. done!
+-BUG - Se si clicca più volte su start, partono più timer!

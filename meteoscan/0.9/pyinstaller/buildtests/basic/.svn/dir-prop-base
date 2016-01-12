@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 37
+*.py[co]
+build
+dist
+python_exe.build
+
+END

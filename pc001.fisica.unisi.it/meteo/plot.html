@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- 1. Add these JavaScript inclusions in the head of your page --> 
+<link type="text/css" href="css/themes/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
+<link href="css/ui.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/highcharts.js"></script> 
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>    
+<script type="text/javascript" src="meteo/meteo.js"></script>
+<script type="text/javascript" src="meteo/meteoconfig.js"></script>
+
+
+
+<style>
+	.meteoPortlet { margin: 0 0.3em 0.3em 0; width: 515px}
+	.meteoPortlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+    .meteoPortlet-header .ui-icon { float: right; }
+	.meteoPortlet-content { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em;  }
+	.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important;}
+</style>
+
+
+<script type="text/javascript"> 
+    $(document).ready(function(){ meteo_main(); });
+</script>
+
+
+<div id="meteo"></div>
+
+

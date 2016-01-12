@@ -1,0 +1,3 @@
+#!/bin/bash
+wget -r --user=zaza --password=salvo868 ftp://pc001.fisica.unisi.it/meteo 
+wget -r --user=zaza --password=salvo868 ftp://pc001.fisica.unisi.it/meteotest
